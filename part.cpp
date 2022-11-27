@@ -1,19 +1,14 @@
 #include "part.h"
+#include <iostream>
 
-Part::Part(string nm, long num ,float cst){
-    name=nm;
-    number=num;
-    cost=cst;
-}
+using namespace std;
 
-Part::Part(const Part& p){
-    name=p.name;
-    number=p.number;
-    cost=p.cost;
-}
+int main()
+{
+CatalogueEntry screw("screw",12345,0.05);
 
-Part::Part( ){
-    name="";
-    number=-1;
-    cost=0.0;
+Part *p1 = new Part(screw);
+Part *p2 = new Part(screw);
+
+cout << p1->getName() <<"\n" << p2->getName() << endl;
 }

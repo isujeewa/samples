@@ -1,7 +1,7 @@
 #include <string>
 using namespace std;
 
-class CatalogueEntry{
+class CatalogueEntry {
 private :
     string name;
     long number;
@@ -12,9 +12,8 @@ CatalogueEntry (string nm, long num ,float cst){
     number=num;
     cost=cst;
 }
-
 string getName() {return name;}
 long getNumnber() {return number;}
 float getCost() {return cost;}
 
-}
+};
