@@ -1,16 +1,20 @@
+#ifndef PART_H
+#define PART_H
 #include "catalogueentry.h"
+#include "component.h"
 using namespace std;
 
-class Part{
+class Part : public Component{
 
 private :
  CatalogueEntry& entry;
 public :
-string getName() {return entry.getName();}
-long getNumnber() {return entry.getNumnber();}
-float getCost() {return entry.getCost();}
+string name() {return entry.getName();}
+long number() {return entry.getNumnber();}
+float cost() {return entry.getCost();}
 Part(CatalogueEntry& catent) : entry(catent){};
 
 
 };
 
+#endif
